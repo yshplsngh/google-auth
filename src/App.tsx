@@ -1,14 +1,16 @@
 import './App.css'
-import {useGoogleLogin} from "@react-oauth/google"
+import {Routes, Route, BrowserRouter} from 'react-router-dom';
+import Login from "./Login.tsx";
+import Home from "./Home.tsx";
 
 function App() {
-    const login = useGoogleLogin({
-        onSuccess:(tokenResponse) => console.log(tokenResponse)
-    })
     return (
-        <button onClick={()=>login()}>
-            login
-        </button>
+        <BrowserRouter>
+            <Routes>
+                <Route path={'/'} element={<Home/>}/>
+                <Route path={'/login'} element={<Login/>}/>
+            </Routes>
+        </BrowserRouter>
     )
 }
 
