@@ -1,30 +1,43 @@
-# React + TypeScript + Vite
+# How to Implement Google OAuth in Node.js and Express
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Google credentials
 
-Currently, two official plugins are available:
+First we have to get Google credentials .
+To get credentials 'if don’t already have them '  go
+to [Google developer Console](https://console.developers.google.com/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
 
-## Expanding the ESLint configuration
+### Running Locally
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Make sure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
 
-- Configure the top-level `parserOptions` property like this:
+1. Clone or Download the repository
+   ```
+   $ git clone https://github.com/yshplsngh/google-auth.git
+   $ cd google-auth
+   ```
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+2. Install Dependencies
+    ```
+      $ npm install
+      $ cd ./api
+      $ npm install
+    ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+3. Start the client-side application
+   ```
+   $ npm run dev
+   ```
+4. Start server
+
+   ```
+   $ cd ./api
+   $ npm run dev
+   ```
+
+Your app should now be running on [localhost:5173](http://localhost:5173/).
+
+## Contributing
+
+If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
